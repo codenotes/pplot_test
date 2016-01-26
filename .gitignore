@@ -28,8 +28,6 @@
 .vs/
 *.def
 *.opensdf
-*.vcxproj
-*.vcxproj.user
 *.sdf
 *.sublime-project
 *.sublime-workspace
