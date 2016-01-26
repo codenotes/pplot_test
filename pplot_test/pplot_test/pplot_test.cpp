@@ -13,69 +13,70 @@ public:
 	virtual void DrawLine(float inX1, float inY1, float inX2, float inY2) override
 	{
 
-		cout << "Draw Line from:" << inX1 << "," << inY1 << " to " << inX2 << "," << inY2 << endl;
+	//	cout << "Draw Line from:" << inX1 << "," << inY1 << " to " << inX2 << "," << inY2 << endl;
 		return;
 
-		throw std::logic_error("The method or operation is not implemented.");
+		printf("DRAWLINE:The method or operation is not implemented.\n");
 	}
 
 	virtual void FillRect(int inX, int inY, int inW, int inH) override
 	{
-		throw std::logic_error("The method or operation is not implemented.");
+		printf("FILL RECT:The method or operation is not implemented.\n");
 	}
 
 	virtual void InvertRect(int inX, int inY, int inW, int inH) override
 	{
-		throw std::logic_error("The method or operation is not implemented.");
+		printf("InvertRect:The method or operation is not implemented.\n");
 	}
 
 	virtual void SetClipRect(int inX, int inY, int inW, int inH) override
 	{
-		throw std::logic_error("The method or operation is not implemented.");
+		printf("SetClipRect:The method or operation is not implemented.\n");
 	}
 
 	virtual long GetWidth() const override
 	{
-		return 10;
-		throw std::logic_error("The method or operation is not implemented.");
+
+		printf("GetWidth:The method or operation is not implemented.\n");
+		return 200;
 	}
 
 	virtual long GetHeight() const override
 	{
-		return 10;
-		throw std::logic_error("The method or operation is not implemented.");
+		printf("GetHeight:The method or operation is not implemented.\n");
+		return 200;
 	}
 
 	virtual void SetLineColor(int inR, int inG, int inB) override
 	{
-		throw std::logic_error("The method or operation is not implemented.");
+		printf("SetLineColor:The method or operation is not implemented.\n");
 	}
 
 	virtual void SetFillColor(int inR, int inG, int inB) override
 	{
-		throw std::logic_error("The method or operation is not implemented.");
+		printf("SetFillColor:The method or operation is not implemented.\n");
 	}
 
 	virtual long CalculateTextDrawSize(const char *inString) override
 	{
+		printf("CalcTextDrawSize: %s.\n",inString);
 		return 5;
-		throw std::logic_error("The method or operation is not implemented.");
 	}
 
 	virtual long GetFontHeight() const override
 	{
-		return 5;
-		throw std::logic_error("The method or operation is not implemented.");
+		printf("GetFontHeight: The method or operation is not implemented.\n");
+		return 2;
 	}
 
 	virtual void DrawText(int inX, int inY, const char *inString) override
 	{
-		throw std::logic_error("The method or operation is not implemented.");
+		printf("DrawText: The method or operation is not implemented.\n");
 	}
 
 	virtual void DrawRotatedText(int inX, int inY, float inDegrees, const char *inString) override
 	{
-		throw std::logic_error("The method or operation is not implemented.");
+		printf("DrawRotatedText: The method or operation is not implemented.\n");
 	}
 
 
@@ -87,16 +88,16 @@ int main()
 	PPlot p;
 	myPainter mp;
 	
-	PlotDataContainer pdc;
+	//PlotDataContainer pdc;
 
-	PlotData pdata;
+//	PlotData pdata;
 
-	pdata.push_back(3.14f);
+//	pdata.push_back(3.14f);
 
 
 	
-
-	MakePainterTester(p);
+	
+	MakeExamplePlot1(p);
 		p.Draw(mp);
 
 	try

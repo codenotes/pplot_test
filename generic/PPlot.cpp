@@ -1625,7 +1625,8 @@ bool PPlot::ConfigureSelf () {
   }
   else {
     const PlotDataBase *theGlue = mPlotDataContainer.GetConstXData (0);
-    const StringData *theStringXData = dynamic_cast<const StringData *>(theGlue);
+	const StringData *theStringXData =dynamic_cast<const StringData *>(theGlue);//TODO: figure this out
+	//const StringData *theStringXData = (const StringData *)(theGlue);//TODO: figure this out
     if (theStringXData != 0) {
       mXTickIterator = &mXNamedTickIterator;
       mXNamedTickIterator.SetStringList (*(theStringXData->GetStringData ()));
@@ -1983,7 +1984,7 @@ void MakeExamplePlot2 (PPlot &ioPPlot) {
   ioPPlot.mYAxisSetup.mAscending = true;
 }
 
-void MakeExamplePlot3 (PPlot &ioPPlot) {
+void MakeExamplePlot3(PPlot &ioPPlot) {
 
   PlotData *theX1 = new PlotData ();
   PlotData *theY1 = new PlotData ();
